@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Location Info</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Weather and Location Info</h1>
+
+        <div class="info-cards">
+            <!-- Location Card -->
+            <div class="info-card">
+                <h2>Location Details</h2>
+                <img src="./assets/map.png" alt="Location Icon" class="weather-icon">
+                <p><strong>Country:</strong> <span id="country">Loading...</span></p>
+                <p><strong>Location Key:</strong> <span id="location-key">Loading...</span></p>
+                <p><strong>Timezone:</strong> <span id="timezone">Loading...</span></p>
+                <p><strong>Location Time:</strong> <span id="location-time">Loading...</span></p>
+            </div>
+
+            <!-- Weather Card -->
+            <div class="info-card">
+                <h2>Weather Info</h2>
+                <img src="./assets/clouds-and-sun.png" alt="Weather Icon" class="weather-icon">
+                <p><strong>Headline:</strong> <span id="headline">Loading...</span></p>
+                <p><strong>Date:</strong> <span id="date">Loading...</span></p>
+                <p><strong>Day Temperature:</strong> <span id="day-temp">Loading...</span>°C</p>
+                <p><strong>Night Temperature:</strong> <span id="night-temp">Loading...</span>°C</p>
+                <p><strong>Day Description:</strong> <span id="day-part">Loading...</span></p>
+                <p><strong>Night Description:</strong> <span id="night-part">Loading...</span></p>
+                <p><strong>Min Temperature:</strong> <span id="min-temp">Loading...</span>°C</p>
+                <p><strong>Max Temperature:</strong> <span id="max-temp">Loading...</span>°C</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

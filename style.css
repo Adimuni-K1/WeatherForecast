@@ -1,0 +1,160 @@
+/* General styles for the container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./assets/weather.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Weather container styles */
+.weather-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for better background contrast */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Marquee effect for h1 */
+h1 {
+    color: #20dc07;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    display: inline-block; /* Ensures it behaves like an inline element */
+    animation: marquee 10s linear infinite; /* Apply animation for marquee effect */
+}
+
+/* Define the marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End at the left */
+    }
+}
+
+/* Flexbox layout to place cards side by side */
+.info-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: black;
+    padding: 10px 0;
+}
+
+/* Card styles */
+.info-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect on the card */
+.info-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Header inside each card */
+.info-card h2 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color and text decoration */
+}
+
+/* Hover effect on h2 */
+.info-card h2:hover {
+    color: #1207e1; /* Change text color on hover */
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* Paragraph styling inside each card */
+.info-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #444444;
+}
+
+.info-card p strong {
+    color: #333;
+}
+
+/* Weather icon styling */
+.weather-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 1024px) {
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Add spacing between cards */
+    }
+
+    .info-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    .weather-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        width: 90%; /* Ensure cards fit the screen */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; /* Further reduce font size for small screens */
+    }
+
+    .weather-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .info-card p {
+        font-size: 0.9rem; /* Smaller text size for small screens */
+    }
+}
